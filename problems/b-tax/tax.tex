@@ -1,0 +1,49 @@
+%!TEX root = uiuc_2018_invitational.tex
+\begin{problem}{Barfoosia Tax Return}
+{stdin}{stdout}
+{1 second}{}{}
+
+It's tax return season in the United States of Barfoosia! Because their IRS employees are lazy, U.S.B's tax system is much simpler: when payroll is delivered, a 50\% tax is withheld, regardless of your pre-tax income or any other personal factors. In the tax return process, a final tax amount will be calculated and a balance will be refunded or collected. The final tax amount will be calculated by a staggered rate based on one's pre-tax annual income: 
+\begin{center}
+	The part of income falling within \$0-\$10,000 will be tax-free \\
+	The part of income falling within \$10,000-\$20,000 will be taxed 10\% \\
+	The part of income falling within \$20,000-\$40,000 will be taxed 20\% \\
+	The part of income falling within \$40,000-\$80,000 will be taxed 40\% \\
+	The part of income above \$80,000 will be taxed 80\% 
+\end{center}
+
+For example, if Alice made \$5,000 last year, all her income will fall into the tax-free column, and she should have been taxed \$0. Since \$2,500 was withheld from her payroll, she should be refunded \$2,500. If Bob made \$35,000 last year, his first \$10,000 income is tax-free, his next \$10,000 income is taxed by 10\%, and his remaining \$15,000 income is taxed by 20\%. He should have been taxed
+\begin{align*}
+	\$10,000 * 0\% + (\$20,000 - \$10,000) * 10\% + (\$35,000 - \$20,000) * 20\% = \$4,000
+\end{align*}
+Since \$17,500 was withheld from his payroll, he should be refunded \$13,500. \\
+
+Given the pre-tax annual income (always a multiple of 100) of U.S.B residents, compute amount refunded to or owed by each person. 
+
+\InputFile
+
+The first line of input contains a positive integer $N$ ($1 \le N \le 100$), which represents the number of residents in U.S.B. \\
+In the following $N$ lines, the $i$th line has one integer $X_i$ ($0 \le X_i \le 1,000,000$, $X_i$ is guaranteed to be a multiple of 100), the pre-tax annual income of the $i$th resident. 
+
+\OutputFile
+
+For each resident, print a line containing tax refunded or owed. If the person should be refunded tax, print "Refund " followed by the amount to be refunded; if the person owes tax, print "Owe " followed by the amount owed; if neither, print "Clear". All printed amounts should be integers. 
+
+\Examples
+
+\begin{example}
+\exmp{
+4
+5000
+35000
+0
+150000
+}{%
+Refund 2500
+Refund 13500
+Clear
+Owe 2000
+}%
+\end{example}
+
+\end{problem}

@@ -1,0 +1,48 @@
+%!TEX root = ../uiuc_2017_tryout_1.tex
+\begin{problem}{A Simple Geometry Problem}
+{stdin}{stdout}
+{1 second}{}{}
+
+Rotation plays an important in computational geometry. 
+In this problem, we are interested in the following 2-dimensional rotation problem:
+
+\begin{center}
+    Given a 2-d point $(x, y)$, what's the position after rotating counterclockwise by an angle $\theta$?
+\end{center}
+
+It is perfect if you already know how to solve this problem from other classes like linear algebra.
+Otherwise, we will derive the solution as follows.
+
+My favorite derivation is based on the complex numbers. 
+A complex number is a number that can be expressed in the form $a + bi$, where $a$ and $b$ are real numbers, and $i$ is a solution of the equation $z^2 = -1$, which is called an imaginary number because there is no real number that satisfies this equation. 
+The rotation is actually equivalent to $(x+yi) \cdot (\cos\theta + \sin\theta i) = (x \cos \theta - y \sin \theta) + (x \sin \theta + y \cos \theta) i$.
+Therefore, the new $x$ coordinate is $x \cos \theta - y \sin \theta$ and the new $y$ coordinate is $x \sin \theta + y \cos \theta$.
+Now, you should be able to solve this problem using the built-in math functions :). Enjoy!
+
+\InputFile
+
+The first line of input contains a positive integer $T$ ($1 \le T \le 100$), which represents the number of test cases in total.
+In the follow $T$ lines, every line has three floating numbers, $x$, $y$, and $\theta$ ($0 \le |x|, |y| \le 100, 0 \le \theta \le 360$), as described before. 
+$\theta$ is in degrees.
+There are exactly 2 digits after the decimal point for all floating numbers.
+
+\OutputFile
+
+For each test case, print a line of the rotated position. All floating numbers are \textbf{rounded up to 2 digits after decimal points}. 
+
+\Examples
+
+\begin{example}
+\exmp{
+3
+1 0 0.00
+2 0 90.00
+2 1 30.00
+}{%
+1.00 0.00
+0.00 2.00
+1.23 1.87
+}%
+\end{example}
+
+\end{problem}
