@@ -1,0 +1,38 @@
+%!TEX root = ../uiuc_2018_invitational.tex
+\begin{problem}{Hard Combinatorics}
+{stdin}{stdout}
+{1 second}{}{}
+
+In this problem, you are asked to calculate the following formula efficiently.
+
+\begin{equation}
+    \sum_{i = 1}^{N} \sum_{j = 1}^{N} { {A_i + B_j + C_i + D_j} \choose {A_i + B_j} }
+\end{equation}
+
+where $N$, $A_i$, $B_i$, $C_i$, and $D_i$ are all given positive integers.
+
+
+\InputFile
+
+The first line of input contains a positive integer $N$ ($1 \le N \le 10^5$).
+The following four lines describe $A_i$, $B_i$, $C_i$, and $D_i$, respectively ($1 \le A_i, B_i, C_i, D_i \le 10^3$).
+
+\OutputFile
+
+For each test case, print a line of the desired answer. 
+
+\Examples
+
+\begin{example}
+\exmp{
+2
+1 2
+3 4
+5 6
+7 8
+}{%
+
+}%
+\end{example}
+
+\end{problem}

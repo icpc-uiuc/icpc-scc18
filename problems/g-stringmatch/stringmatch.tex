@@ -1,0 +1,47 @@
+%!TEX root = ../uiuc_2018_invitational.tex
+\begin{problem}{Greedy String Match}
+{stdin}{stdout}
+{1 second}{}{}
+
+Given a long string and a set of keywords, you are asked to find non-overlapped matches of these keywords in the given string.
+Although there are several dynamic programming algorithms can maximize the total number of matched characters, you are NOT going to do that in this problem, considering the efficiency.
+
+Alternatively, you are going to implement a greedy algorithm: from the left to the right, try to match the longest keyword starting from every non-matched character.
+In the end, print the total number of matched characters.
+
+\InputFile
+
+The first line of input contains the long string $S$ ($1 \le |S| \le 10^5$).
+The second line contains an integer $N$, i.e., the number of keywords ($1 \le N \le 10^4$).
+In next $N$ lines, there is a single keyword per line. 
+The lengths of these keywords are no longer than $100$.
+
+\OutputFile
+
+For each test case, print a line of the total number of matched characters.
+
+\Examples
+
+\begin{example}
+\exmp{
+This ICPC contest is sooo coooool!
+3
+ICPC
+so
+cool
+}{%
+4
+}%
+\exmp{
+thisisanoverlapcase
+4
+this
+isis
+is
+san
+}{%
+6
+}%
+\end{example}
+
+\end{problem}
