@@ -1,0 +1,57 @@
+%!TEX root = uiuc_2018_invitational.tex
+
+\begin{problem}{Just A Hike!}
+{stdin}{stdout}
+{1 second}{}{}
+
+The summer just started and you just spent all night last night playing the famous Creator-Destructor game of Ubihard. 
+Thus, you decide to do something more helpful this morning - cleaning the attic. Cleaning the attic, although seems to be
+a boring job to do, is in fact your favourite chore at home. While doing the task, you always have a chance to go through 
+the old photos of your family and spend time recalling all the good memories you had during your childhood. Suddenly, you 
+come accross the old photo of you and your family in your first hike. At this very moment, you decide that your second
+mission of the summer (the first one is to finish the very interesting game mentioned above) is to get your family to go
+on a hike together one more time.\\
+
+You start to plan for the hike using a that has the estimated height of the countryside area of your hometown. It can be 
+represented as a rectangle grid with $m$ rows and $n$ columns. The cell at the $i_{th}$ row and $j_{th}$ column is denoted 
+as cell $(i, j)$ and has the height $h[i, j]$. You call a cell $(i, j)$ a peak if its height is greater than or equal all 
+the cell adjacent to it. Two cells are considered adjacent if the share a common edge. Thus, a cell has at most $4$ adjacent 
+cells. You believe that any peak in the map represents a real mountain and can be used for hiking. You want to find any peak 
+here as the destination for your hike. However, since the map is rather large, it is simply impossible to find a peak manually.
+As a Computer Science student, you know this is your moment to shine!
+
+\InputFile
+
+The first line contains two integers $m, n$ ($1 \leq m, n \leq 10^5$) which represent the size of the map. The second line
+contains $n$ integers $h[1, 1], h[1, 2], \cdots, h[1, n]$ represent the height of all the cells in the first row of the
+map. Since the map is rather large, this is the only thing you get. The rest of the map can be calculated with the formula
+    \begin{equation}
+       h[i, j] = h[1, j]^j \text{ mod } 1000000007
+    \end{equation}
+where mod denotes the remainder of the division for $10^9 + 7$.
+
+\OutputFile
+
+Print $2$ numbers $i, j$ denotes the coordinate of any peak $(i, j)$.
+
+\Examples
+
+\begin{example}
+\exmp{
+2 3
+2 3 1
+}{%
+2 2
+}%
+\end{example}
+
+Explanation: The full map is
+    \begin{equation}
+    \begin{matrix}
+        2 & 3 & 1\\
+        4 & 9 & 1
+    \end{matrix}
+    \end{equation}
+Then, clearly the peak is cell $(2, 2)$ with height $9$.
+
+\end{problem}
