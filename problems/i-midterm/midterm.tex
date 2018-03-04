@@ -1,0 +1,43 @@
+%!TEX root = uiuc_2018_invitational.tex
+\begin{problem}{Impossible Task}
+{stdin}{stdout}
+{1 second}{}{}
+
+Spring break is already over. Even though feeling that a one week break is far from enough (as usual), 
+you know it is time to resume working. Suddenly, you realize that there is a midterm in Number Theory
+coming up next week. As skimming through all the practice questions given by your professor (which 
+you should have done over break), you realize that there is one type of question where you have no idea
+how to solve. The question is of the form: Given a number $n$, calculate the sum of all divisors of $n$ except
+$n$ itself. Even worse, since you never went to any lecture this semester (how surprising), you have no
+clue where to begin. However, lucky for you, the professor promised that the given $n$ on the exam would
+belong to a certain set of number. Thus, as long as you can memorize all the possible results, you will be
+good. Since the size of the given set is rather large, you want to write a program to compute all the answers before
+starting memorizing.
+
+\InputFile
+
+The first line contains an integer $q \leq 10^6$ which denotes the number of possible $n$ will be given
+on the exam. Each of the next $q$ lines contains an integer $a_i$ which is the $i_{th}$ possible value
+($1 \leq a_i \leq 10^6$ $\forall$ $1 \leq i \leq q$).
+
+\OutputFile
+
+The output contains $q$ lines. The $i_{th}$ line should contain an integer which is the answer to the question
+with $n = a_i$.
+
+\Examples
+
+\begin{example}
+\exmp{
+3
+1
+2
+6
+}{%
+0
+1
+5
+}%
+\end{example}
+
+\end{problem}
