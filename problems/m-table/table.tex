@@ -1,0 +1,63 @@
+%!TEX root = uiuc_2018_invitational.tex
+\begin{problem}{Macrosoft}
+{stdin}{stdout}
+{1 second}{}{}
+
+Macrosoft is planning to dominate the world, but they can't succeed without 
+a super duper awesome deluxe magnificent spreadsheet program! It turns out to be your job to
+make one as an employee. 
+
+Your spreadsheet program takes in some user input, and renders it as a table in ASCII characters. 
+\begin{center}
+TODO: add example here
+\end{center}
+The borders of the table are represented by '-' and '|', while intersections are represented by '+'. All cells in a column share the same width, with spaces added as padding. It is required that numbers align to the right, while everything else aligns to the left. A number is a string that contains only digits. Commas are used to divide user input into cells in each row. 
+
+\InputFile
+
+The first line contains an integer $N$, the number of rows.
+The next $N$ lines contains the content of the table. 
+
+It is guaranteed that $1 \leq N \leq 100$ and each input line contains at most $99$ characters. 
+The input lines only contain digits (0-9), lower case letters (a-z) and commas (,). There are no spaces. However, it is completely fine for a line to be empty.
+
+\OutputFile
+
+The table, rendered in ASCII characters according to the specficication.
+
+\Examples
+
+\begin{example}
+\exmp{
+2
+first,line
+row,2
+}{%
++-----+----+
+|first|line|
++-----+----+
+|row  |   2|
++-----+----+
+}%
+\exmp{
+1
+gwyn,,gwynevere,gwyndolin
+}{%
++----++---------+---------+
+|gwyn||gwynevere|gwyndolin|
++----++---------+---------+
+}%
+\exmp{
+2
+
+whereisthelastline
+}{%
++------------------+
+|                  |
++------------------+
+|whereisthelastline|
++------------------+
+}%
+
+\end{example}
+\end{problem}
