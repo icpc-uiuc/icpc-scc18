@@ -19,16 +19,16 @@ int main() {
     for (int i = 0; i < K; i++)
         scanf("%d %lf", &load[i].first, &load[i].second);
 
-    vector<int> dp(5050);
+    vector<int> dp(20050);
 
     for (int i = 0; i < N; i++)
-        for (int j = 5000; j >= guns[i].first; j--)
+        for (int j = 20000; j >= guns[i].first; j--)
             dp[j] = max(dp[j], dp[j - guns[i].first] + guns[i].second);
 
     double eff = 0;
 
     int curr_load = 0;
-    for (int i = 0; i <= 5000; i++) {
+    for (int i = 0; i <= 20000; i++) {
         if (load[curr_load + 1].first <= i) {
             curr_load++;
             if (curr_load == K - 1)
