@@ -9,13 +9,13 @@ In this problem, you are asked to calculate the following formula efficiently.
     \sum_{i = 1}^{N} \sum_{j = 1}^{N} { {A_i + B_j + C_i + D_j} \choose {A_i + B_j} }
 \end{equation}
 
-where $N$, $A_i$, $B_i$, $C_i$, and $D_i$ are all given positive integers.
+where $N$, $A_i$, $B_i$, $C_i$, and $D_i$ are all given positive integers. Since the answer can be extremely large, you are only asked to print its remainder modulo $10^9 + 7$.
 
 
 \InputFile
 
 The first line of input contains a positive integer $N$ ($1 \le N \le 10^5$).
-The following four lines describe $A_i$, $B_i$, $C_i$, and $D_i$, respectively ($1 \le A_i, B_i, C_i, D_i \le 10^3$).
+The following $N$ lines describe $A_i$, $B_i$, $C_i$, and $D_i$, respectively ($1 \le A_i, B_i, C_i, D_i \le 10^3$).
 
 \OutputFile
 
@@ -26,12 +26,20 @@ For each test case, print a line of the desired answer.
 \begin{example}
 \exmp{
 2
-1 2
-3 4
-5 6
-7 8
+1 2 3 4
+5 6 7 8
 }{%
-
+7789928
+}%
+\exmp{
+5
+1 2 3 4
+1 2 3 4
+4 5 1 2
+5 6 7 8
+5 6 3 1
+}{%
+8833732
 }%
 \end{example}
 

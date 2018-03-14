@@ -33,7 +33,7 @@ morale. This in turn will bring up the battle efficiency of the whole ship.
 
 \InputFile
 
-The first line of input contains one integer $N (1 \le 200)$, the number 
+The first line of input contains one integer $N (1 \le N \le 200)$, the number 
 of guns available.
 
 In the next $N$ lines, each line will contain two nonnegative integers,
@@ -45,10 +45,10 @@ the number of load ranges.
 In the next $K$ lines, each line contains two numbers $l_i, m_i$, the 
 first integer is the starting weight $l_i (0 \le l_i \le 20000)$ of this load 
 range.
-The second number is the power modifier $m_i (0 \le m_i \le 10)$.
+The second number is a real number, the power modifier $m_i (0 \le m_i \le 10)$.
 
 It is guaranteed the load ranges will be given in the increasing order 
-of $l_i$, so $l_0$ will always be 0.
+of $l_i$, so $l_0$ will always be 0. All values of $l_i$ are distinct. It is implied that $r_i = l_{i+1} - 1$ and $r_K$ does not matter (you can think of it as infinity). 
 
 It is also guaranteed the last load range will always have power modifier $0$, 
 which can be considered as right past the maximum load capacity of this ship.

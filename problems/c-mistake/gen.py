@@ -5,7 +5,7 @@ os.makedirs("test", exist_ok=True)
 
 # first few tests are manual
 start_index = 2
-num_tests = 50
+num_tests = 10
 
 for i in range(start_index, num_tests):
     N = np.random.randint(200, 201)
