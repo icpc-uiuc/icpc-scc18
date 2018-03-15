@@ -49,7 +49,7 @@ int main() {
 
     cin >> q;
     for (int i = 0; i < q; ++i) {
-        cin >> n;
-        cout << f[n] << endl;
+        scanf("%d", &n);
+        printf("%d\n", f[n]);
     }
 }
