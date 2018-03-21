@@ -3,10 +3,10 @@
 {stdin}{stdout}
 {1 second}{}{}
 
-Summer break just started and you just arrived home yesterday. Even better, you just got yourself the newly released game of Ubihard. The game tells the story about the creation of the world and you will become the Creator. As we know, at the beginning of time, before creating any creatures, the first thing the Creator should do is to create raindrops. On the other hand, obviously, there is a Destroyer that will prevent the world from forming. (I know it's a lame game, but what do you expect from Ubihard?). The game takes place on a $2D$ plane and is limited by the rectangle with lower-left corner $(0, 0)$ and top-right corner $(m, n)$. The $x$-axis represents the ground. The rules are:
+Summer break just started and you just arrived home yesterday. Even better, you just got yourself the newly released game of Ubihard. The game tells the story about the creation of the world and you will become the Creator. As we know, at the beginning of time, before creating any creatures, the first thing the Creator should do is to create raindrops. On the other hand, obviously, there is a Destroyer that will prevent the world from forming. (I know it's a lame game, but what do you expect from Ubihard?). The game takes place on a $2D$ plane and is limited by the rectangle with lower-left corner $(0, 0)$ and top-right corner $(n, m)$. The $x$-axis represents the ground. The rules are:
 	\begin{itemize}
 		\item
-		The Creator can select a point $(x, y)$ inside the give frame with integer coordinates a ($x, y \in \mathbb{Z}, 0 \leq x \leq m, y \leq n$) and create a raindrop at $(x, y)$. Then, the Creator will receive $y$ points.
+		The Creator can select a point $(x, y)$ inside the give frame with integer coordinates a ($x, y \in \mathbb{Z}, 0 \leq x \leq n, 0 \leq y \leq m$) and create a raindrop at $(x, y)$. Then, the Creator will receive $y$ points.
 		\item
 		The Destroyer can create horizontal bars inside the given frame to prevent the raindrops from touching the ground. A bar can be represented as a segment with $2$ endpoints $(x_1, y)$ and $(x_2, y)$ with integer coordinates $(0 \leq x_1 < x_2 \leq n, 0 \leq y \leq m, x_1, x_2, y \in \mathbb{Z})$. After created, the bar will stay there for the rest of the game. A raindrop will not reach the ground if it is created above a bar. That is, if there is a bar with end points $(x_1, y)$, $(x_2, y)$ and a raindrop created at $(x', y')$, the drop will not reach the ground if and only if $x_1 \leq x' \leq x_2$ and $y \leq y'$. Because there is a bug in the game, the newly created bars can overlap with previously created bars (Why? Cause Ubihard created it!).
 		\item
@@ -17,7 +17,7 @@ Summer break just started and you just arrived home yesterday. Even better, you 
 
 \InputFile
 
-The first line contains two integers $m, n$ ($1 \leq m, n \leq 10^5$) represents the top-right corner $(m, n)$ of the frame. The second line contains $q$, the number of turns you and your brother played in total. Each of the next $q$ lines contain $3$ integers $x_1, x_2, y$ ($0 \leq x_1 < x_2 \leq m, 1 \leq y \leq n$) that represent a move of your brother. That is, creating a bar with the $2$ end points $(x_1, y)$ and $(x_2, y)$.
+The first line contains two integers $m, n$ ($1 \leq m, n \leq 10^5$) represents the top-right corner $(m, n)$ of the frame. The second line contains $q$i ($1 \leq q \leq 10^6$) the number of turns you and your brother played in total. Each of the next $q$ lines contain $3$ integers $x_1, x_2, y$ ($0 \leq x_1 < x_2 \leq n, 0 \leq y \leq m$) that represent a move of your brother. That is, creating a bar with the $2$ end points $(x_1, y)$ and $(x_2, y)$.
 
 \OutputFile
 
@@ -29,12 +29,12 @@ For each turn, print a single line with the maximum a mount of point you can get
 \exmp{
 5 5
 3
-1 2 4
+0 2 4
 3 5 3
-1 4 2
+0 5 2
 }{%
 5
-3
+4
 2
 }%
 \end{example}
