@@ -26,7 +26,7 @@ The first line contains two integers $m, n$ ($1 \leq m, n \leq 10^5$) which repr
 contains $n$ integers $h[1, 1], h[1, 2], \cdots, h[1, n]$ represent the height of all the cells in the first row of the
 map. Since the map is rather large, this is the only thing you get. The rest of the map can be calculated with the formula
     \begin{equation}
-       h[i, j] = h[1, j]^j \text{ mod } 1000000007
+       h[i, j] = h[1, j]^i \text{ mod } 1000000007
     \end{equation}
 where mod denotes the remainder of the division for $10^9 + 7$.
 

@@ -8,7 +8,7 @@ int a[maxN], m, n;
 
 int power(int x, int p) {
     if (p == 0) return 1;
-    if (p == 1) return p;
+    if (p == 1) return x;
     int c = power(x, p / 2);
     c = (1ll * c * c) % modP;
     if (p % 2) c = (1ll * c * x) % modP;
@@ -31,6 +31,7 @@ int main() {
         scanf("%d", &a[i]);
     
     int l = 1, r = n;
+    int t = 0;
     while (l <= r) {
         int mid = (l + r) >> 1;
         int pos, posl, posr;
