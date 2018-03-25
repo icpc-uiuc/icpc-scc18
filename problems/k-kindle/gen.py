@@ -11,7 +11,7 @@ os.makedirs("test", exist_ok=True)
 
 # first few tests are manual
 start_index = 2
-num_tests = 50
+num_tests = 20
 
 i = start_index
 while i < num_tests:

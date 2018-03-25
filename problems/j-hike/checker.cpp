@@ -11,7 +11,7 @@ int m, n, x, y, a[maxN];
 
 void parse(int argc, char* argv[]) {
     input = string(argv[1]);
-    feed_back_file = string(argv[3]) + "judgemessage.txt";
+    feed_back_file = string(argv[2]) + "judgemessage.txt";
 }
 
 int power(int x, int k) {
@@ -29,7 +29,7 @@ int get_height(int x, int y) {
 
 int main(int argc, char* argv[]) {
     parse(argc, argv);
-    
+
     // Read input
     FILE* finp = fopen(input.c_str(), "r");
     fscanf(finp, "%d %d", &m, &n);
@@ -55,18 +55,18 @@ int main(int argc, char* argv[]) {
 
     // Check correct peak
     int h = get_height(x, y);
-    if ((x > 1 && get_height(x + 1, y) > h) ||
+    if ((x > 1 && get_height(x - 1, y) > h) ||
         (y > 1 && get_height(x, y - 1) > h) ||
         (x < m && get_height(x + 1, y) > h) ||
         (x < n && get_height(x, y + 1) > h))
         correct = false;
 
     if (correct) {
-        fprintf(fverdict, "Correct");
+        fprintf(fverdict, "Correct\n");
         return 42;
     }
     else {
-        fprintf(fverdict, "Wrong answer");
+        fprintf(fverdict, "Wrong answer\n");
         return 43;
     }
 }
