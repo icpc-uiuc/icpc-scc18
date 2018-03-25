@@ -21,7 +21,7 @@ void update(int k, int l, int r, int i, int j, int v) {
     if (j < l || r < i) return;
     lazy_update(k, l, r);
     if (i <= l && r <= j) {
-        g[k] = v;
+        g[k] = min(v, g[k]);
         return;
     }
     int mid = (l + r) >> 1;
