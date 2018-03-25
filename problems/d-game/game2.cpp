@@ -76,12 +76,12 @@ struct segment_tree {
 int main() {
     int m, n, q;
     scanf("%d %d %d", &m, &n, &q);
-    vector<long long> A(m, n);
+    vector<long long> A(n + 1, m);
     segment_tree st(A);
     while (q--) {
         int x1, x2, y;
         scanf("%d %d %d", &x1, &x2, &y);
-        st.update(x1 - 1, x2 - 1, y - 1);
-        printf("%lld\n", max(0LL, st.query(0, m - 1)));
+        st.update(x1, x2, y);
+        printf("%lld\n", max(0LL, st.query(0, n)));
     }
 }
