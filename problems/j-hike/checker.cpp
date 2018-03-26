@@ -4,7 +4,7 @@
 
 using namespace std;
 
-const int maxN = 1e5 + 10, modP = 1e9 + 7;
+const int maxN = 1e6 + 10, modP = 1e9 + 7;
 
 string input, feed_back_file, s;
 int m, n, x, y, a[maxN];
