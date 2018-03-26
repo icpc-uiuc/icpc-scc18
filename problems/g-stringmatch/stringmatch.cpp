@@ -41,7 +41,7 @@ int main()
             assert('a' <= c && c <= 'z');
             c -= 'a';
             if (trie[u].child[c] == -1) {
-                trie[u].child[c] = cnt ++;
+                trie[u].child[c] = ++ cnt;
             }
             u = trie[u].child[c];
         }
