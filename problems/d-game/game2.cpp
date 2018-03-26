@@ -74,8 +74,8 @@ struct segment_tree {
     }};
 
 int main() {
-    int m, n, q;
-    scanf("%d %d %d", &m, &n, &q);
+    int n, m, q;
+    scanf("%d %d %d", &n, &m, &q);
     vector<long long> A(n + 1, m);
     segment_tree st(A);
     while (q--) {
