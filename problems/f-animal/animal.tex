@@ -3,14 +3,14 @@
 {stdin}{stdout}
 {1 second}{}{}
 
-The city zoo is featuring its variety of animals in the entrance square! There are $N$ cages in a row, each can contain an animal. The zoo has $M$ types of animals, and infinitely many identical individuals in each type. Every day the zookeeper selects $N$ animals and arrange them to fill all the cages. However, there are constraints on the arrangement, each stating either (1) that two types of animal cannot be placed next to each other since one preys on another, or (2) that a particular cage can only contain certain types of animal. \\
+The city zoo is featuring its variety of animals in the entrance square! There are $N$ cages in a row, each can contain an animal. The zoo has $M$ types of animals, and infinitely many identical individuals in each type. Every day the zookeeper selects $N$ animals and arrange them to fill all the cages. However, there are constraints on the arrangement, each stating either (1) that two types of animal cannot be placed next to each other since one preys on another, or (2) that a particular cage can NOT contain certain types of animal. Note that it's possible that two individual animals of the same type cannot be adjacent, since cannibalism happens in nature! \\
 
 The zookeeper wants a different configuration of featured animals everyday. Two configurations differ if any cage contains different types of animal in these two days. The zookeeper wants to know how many distinct configurations are possible. Help him calculate it! 
 
 \InputFile
 
 The first line of input contains three integers $N, M, K$ ($1 \le N \le 10^8, 1 \le M \le 50, 1 \le K \le 1000$). $N$ is the number of cages, $M$ is the number of types, and $K$ is the number of constraints. \\
-In the following $K$ lines, each line starts with an integer $t$, the type of constraint. If $t$ is 1, then it is followed by two integers $x, y$ ($1 \le x, y \le M$), denoting that an a type $x$ animal cannot be placed next to a type $y$ animal. If $t$ is 2, then it is followed by two integers $i, p$ ($1 \le i \le N, 1 \le p \le M$), and $p$ integers $c_1, \hdots, c_p$ denoting the allowed types for cage $i$. 
+In the following $K$ lines, each line starts with a character $t \in \{'A','B'\}$, the type of constraint. If $t$ is 'A', then it is followed by two integers $x, y$ ($1 \le x, y \le M$), denoting that an a type $x$ animal cannot be placed next to a type $y$ animal. If $t$ is 'B', then it is followed by two integers $i, p$ ($1 \le i \le N, 1 \le p \le M$), and $p$ distinct integers $c_1, \hdots, c_p$ denoting the forbidden types for cage $i$. 
 
 \OutputFile
 
@@ -20,10 +20,23 @@ Print a line containing one integer, the number of distinct configurations, modu
 
 \begin{example}
 \exmp{
-
+3 4 4
+A 1 3
+B 1 1 2
+A 2 4
+B 3 3 1 2 4
 }{%
-
+7
+}%
+\exmp{
+10 2 0
+}{%
+1024
 }%
 \end{example}
+
+\Notes
+
+In example 1, there are 3 cages and 4 types of animals. Animals of type 1 and 3 cannot be adjacent; animals of type 2 and 4 cannot be adjacent. Cage 1 cannot contain animal type 2; cage 3 cannot contain animal type 1,2,4. The only possible configurations are (1,2,3),(3,2,3),(3,3,3),(4,3,3),(1,4,3),(3,4,3),(4,4,3). 
 
 \end{problem}
