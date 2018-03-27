@@ -4,12 +4,12 @@
 
 using namespace std;
 
-int max_q[] = { 20, 1000, 10000, 100000, 1000000 };
-int max_n[] = { 10, 100, 1000, 10000, 100000 };
+int max_q[] = { 20, 1000, 10000, 100000 };
+int max_n[] = { 10, 100, 1000, 10000 };
 
 int main() {
     srand(23041997);
-    for (int i = 0; i < 5; ++i) {
+    for (int i = 0; i < 4; ++i) {
         for (int test = i * 10; test < (i + 1) * 10; ++test) {
             char input[100];
             sprintf(input, "game.%d.in", test);
