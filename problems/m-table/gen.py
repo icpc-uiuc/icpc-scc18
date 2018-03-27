@@ -73,7 +73,7 @@ for n, m, mu, s in shapes:
             r -= t
             k.append(t)
         v = [[f(i, j, k[j]) for j in range(m)] for i in range(n)]
-        y = '%d\n%s' % (n, '\n'.join(','.join(x) for x in v))
+        y = '%d\n%s\n' % (n, '\n'.join(','.join(x) for x in v))
         if y not in d:
             d.add(y)
             with open('tests/' + new_fn(), 'w') as fh:
