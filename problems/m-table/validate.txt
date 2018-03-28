@@ -2,12 +2,12 @@ Problem Validation Form
 
 Please check "Y"s in the box (remove the "N"s) after you finish the task. 
 
-[Y/N] You wrote a solution independently (w/o looking at the problem setter's solution first). 
-[Y/N] Your code produces the same results on test cases given by problem setter. 
-[Y/N] The problem setter uses a correct algorithm. 
-[Y/N] The problem setter covers corner cases correctly in his code. 
-[Y/N] Test data provides good coverage (corner cases, upper bound limit...)
+[Y] You wrote a solution independently (w/o looking at the problem setter's solution first). 
+[Y] Your code produces the same results on test cases given by problem setter. 
+[Y] The problem setter uses a correct algorithm. 
+[Y] The problem setter covers corner cases correctly in his code. 
+[Y] Test data provides good coverage (corner cases, upper bound limit...)
 
-Signature (type your name): 
-Date: 
+Signature (type your name): Yuting Zhang
+Date: 3/27/2018
 
