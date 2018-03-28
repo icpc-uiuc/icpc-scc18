@@ -2,7 +2,7 @@
 
 using namespace std;
 
-const int maxN = 1e5, modP = 1e9 + 7;
+const int maxN = 1e6, modP = 1e9 + 7;
 
 int a[maxN], m, n;
 
