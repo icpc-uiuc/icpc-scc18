@@ -19,8 +19,6 @@ for i in range(4):
 for i in range(10):
     v.append([i*100 + j for j in range(100)])
 
-print(v)
-
 for i in range(len(v)):
     with open('tests/%d.in' % i, 'w') as f:
         f.write('\n'.join(str(x) for x in ([len(v[i])] + [y*100 for y in v[i]])))
