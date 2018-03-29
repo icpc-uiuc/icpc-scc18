@@ -10,7 +10,8 @@ The zookeeper wants a different configuration of featured animals everyday. Two 
 \InputFile
 
 The first line of input contains three integers $N, M, K$ ($1 \le N \le 10^8, 1 \le M \le 50, 0 \le K \le 1000$). $N$ is the number of cages, $M$ is the number of types, and $K$ is the number of constraints. \\
-In the following $K$ lines, each line starts with a character $t \in \{'A','B'\}$, the type of constraint. If $t$ is 'A', then it is followed by two integers $x, y$ ($1 \le x, y \le M$), denoting that an a type $x$ animal cannot be placed next to a type $y$ animal. If $t$ is 'B', then it is followed by two integers $i, p$ ($1 \le i \le N, 1 \le p \le M$), and $p$ distinct integers $c_1, \hdots, c_p$ denoting the forbidden types for cage $i$. 
+In the following $K$ lines, each line starts with a character $t \in \{'A','B'\}$, the type of constraint. If $t$ is 'A', then it is followed by two integers $x, y$ ($1 \le x, y \le M$), denoting that an a type $x$ animal cannot be placed next to a type $y$ animal. All pairs followed by 'A' are distinct. More specifically, $(a, b)$ and $(b, a)$ are considered same.
+\\ If $t$ is 'B', then it is followed by two integers $i, p$ ($1 \le i \le N, 1 \le p \le M$), and $p$ distinct integers $c_1, \hdots, c_p$ denoting the forbidden types for cage $i$. There will be at most one type 'B' constraint for each cage.
 
 \OutputFile
 
