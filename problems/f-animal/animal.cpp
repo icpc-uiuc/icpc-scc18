@@ -1,3 +1,4 @@
+#include <algorithm>
 #include <iostream>
 #include <vector>
 #define LL long long
@@ -33,7 +34,7 @@ struct Matrix {
 			for (int k = 0; k < m; k++) {
 				for (int j = 0; j < b.m; j++) {
 					ans.a[i][j] = (ans.a[i][j] + a[i][k] * b.a[k][j]) % MOD;
-				}
+                                }
 			}
 		}
 		return ans;
