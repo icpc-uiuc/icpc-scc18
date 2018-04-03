@@ -51,7 +51,7 @@ int main() {
 	long long ans = 0;
     for (int i = 0; i < q; ++i) {
         ans += f[n];
-		n = ((long long)n * n) % 1000000 + 1;
+		n = ((long long)n * n) % 999983 + 1;
     }
 	cout << ans << endl;
 }

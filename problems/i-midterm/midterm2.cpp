@@ -30,7 +30,7 @@ int main() {
     for (int i = 0; i < q; i++) {
         if (ans[a] != -1) {
 			output += ans[a];
-            a = ((long long)a * a) % 1000000 + 1;
+            a = ((long long)a * a) % 999983 + 1;
             continue;
         }
 
@@ -56,7 +56,7 @@ int main() {
 
         ans[a] -= a;
         output += ans[a];
-		a = ((long long)a * a) % 1000000 + 1;
+		a = ((long long)a * a) % 999983 + 1;
     }
 	cout << output << endl;
 }
