@@ -24,12 +24,13 @@ int main() {
 
     scanf("%d", &q);
     vector<long long> ans(MAXN + 1, -1);
+	long long output = 0;
+	int a; 
+	scanf("%d", &a);
     for (int i = 0; i < q; i++) {
-        int a;
-        scanf("%d", &a);
-
         if (ans[a] != -1) {
-            printf("%lld\n", ans[a]);
+			output += ans[a];
+            a = ((long long)a * a) % 1000000 + 1;
             continue;
         }
 
@@ -54,6 +55,8 @@ int main() {
         }
 
         ans[a] -= a;
-        printf("%lld\n", ans[a]);
+        output += ans[a];
+		a = ((long long)a * a) % 1000000 + 1;
     }
+	cout << output << endl;
 }

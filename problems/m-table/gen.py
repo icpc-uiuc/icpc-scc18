@@ -76,5 +76,5 @@ for n, m, mu, s in shapes:
         y = '%d\n%s\n' % (n, '\n'.join(','.join(x) for x in v))
         if y not in d:
             d.add(y)
-            with open('tests/' + new_fn(), 'w') as fh:
+            with open('test/' + new_fn(), 'w') as fh:
                 fh.write(y)

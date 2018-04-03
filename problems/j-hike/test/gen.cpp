@@ -13,7 +13,7 @@ int main() {
     for (int i = 0; i < 5; ++i) {
         for (int test = i * 10; test < (i + 1) * 10; ++test) {
             char input[100];
-            sprintf(input, "hike.%d.in", test);
+            sprintf(input, "%d.in", test);
             FILE* inp = fopen(input, "w");
             int m = (rand() % max_m[i]) + 1;
             int n = (rand() % max_m[i]) + 1;

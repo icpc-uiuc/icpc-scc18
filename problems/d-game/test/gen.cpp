@@ -12,7 +12,7 @@ int main() {
     for (int i = 0; i < 4; ++i) {
         for (int test = i * 10; test < (i + 1) * 10; ++test) {
             char input[100];
-            sprintf(input, "game.%d.in", test);
+            sprintf(input, "%d.in", test);
             FILE* inp = fopen(input, "w");
             int m = (rand() % max_n[i]) + 1;
             int n = (rand() % max_n[i]) + 1;
@@ -30,7 +30,7 @@ int main() {
             fclose(inp);
 
             char output[100];
-            sprintf(output, "game.%d.out", test);
+            sprintf(output, "%d.ans", test);
             cout << input << " " << output << endl;
             char command[200];
             sprintf(command, "../a.out < %s > %s", input, output);

@@ -47,9 +47,11 @@ int main() {
         f[i] -= i;
     }
 
-    cin >> q;
+    cin >> q >> n;
+	long long ans = 0;
     for (int i = 0; i < q; ++i) {
-        scanf("%d", &n);
-        printf("%d\n", f[n]);
+        ans += f[n];
+		n = ((long long)n * n) % 1000000 + 1;
     }
+	cout << ans << endl;
 }
