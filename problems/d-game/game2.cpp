@@ -2,6 +2,7 @@
 #include <utility>
 #include <algorithm>
 #include <climits>
+#include <vector>
 
 using namespace std;
 
