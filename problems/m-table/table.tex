@@ -9,9 +9,36 @@ make one as an employee.
 
 Your spreadsheet program takes in some user input, and renders it as a table in ASCII characters. 
 \begin{center}
-TODO: add example here
+    \begin{minipage}{1.2in}
+\begin{verbatim}
+Day,Temperature
+Monday,35
+Tuesday,40
+\end{verbatim}
+    \end{minipage}
+    $\Longrightarrow$    
+    \begin{tabular}{ | l | r | }
+        \hline
+        Day & Temperature \\
+        \hline
+        Monday & 35 \\
+        \hline
+        Tuesday & 40 \\
+        \hline
+    \end{tabular} $\Longrightarrow$
+        \begin{minipage}{2in} 
+\begin{verbatim}
+$-------$-----------$
+|Day    |Temperature|
+$-------$-----------$
+|Monday |         35|
+$-------$-----------$
+|Tuesday|         40|
+$-------$-----------$
+\end{verbatim} 
+        \end{minipage}
 \end{center}
-The borders of the table are represented by '-' and '|', while intersections are represented by '+'. All cells in a column share the same width, with spaces added as padding. It is required that numbers align to the right, while everything else aligns to the left. A number is a string that contains only digits. Commas are used to divide user input into cells in each row. 
+The borders of the table are represented by '-' and '|', while intersections are represented by '\$'. All cells in a column share the same width, with spaces added as padding. It is required that numbers align to the right, while everything else aligns to the left. A number is a string that contains only digits. Commas are used to divide user input into cells in each row. 
 
 \InputFile
 
@@ -33,30 +60,30 @@ The table, rendered in ASCII characters according to the specficication.
 first,line
 row,2
 }{%
-+----------+--------+
+\$----------\$--------\$
 |first|line|
-+----------+--------+
+\$----------\$--------\$
 |row  |   2|
-+----------+--------+
+\$----------\$--------\$
 }%
 \exmp{
 1
 gwyn,,gwynevere,gwyndolin
 }{%
-+--------++------------------+------------------+
+\$--------\$\$------------------\$------------------\$
 |gwyn||gwynevere|gwyndolin|
-+--------++------------------+------------------+
+\$--------\$\$------------------\$------------------\$
 }%
 \exmp{
 2
 \vspace{5mm}
 whereisthelastline
 }{%
-+------------------------------------+
+\$------------------------------------\$
 |                  |
-+------------------------------------+
+\$------------------------------------\$
 |whereisthelastline|
-+------------------------------------+
+\$------------------------------------\$
 }%
 \end{example}
 
