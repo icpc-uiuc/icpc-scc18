@@ -4,14 +4,15 @@
 
 using namespace std;
 
-const int maxN = 1e6 + 10, modP = 1e9 + 7;
+const int maxN = 1000000 + 10, modP = 1000000000 + 7;
 
-string input, feed_back_file, s;
+string input, answer, feed_back_file, s;
 int m, n, x, y, a[maxN];
 
 void parse(int argc, char* argv[]) {
     input = string(argv[1]);
-    feed_back_file = string(argv[2]) + "judgemessage.txt";
+    answer = string(argv[2]);
+    feed_back_file = string(argv[3]) + "/judgemessage.txt";
 }
 
 int power(int x, int k) {
@@ -29,10 +30,10 @@ int get_height(int x, int y) {
 
 int main(int argc, char* argv[]) {
     parse(argc, argv);
-
+printf("123\n");
     // Read input
     FILE* finp = fopen(input.c_str(), "r");
-    fscanf(finp, "%d %d", &m, &n);
+    fscanf(finp, "%d%d", &m, &n);
     for (int i = 1; i <= n; ++i)
         fscanf(finp, "%d", &a[i]);
 
@@ -48,7 +49,7 @@ int main(int argc, char* argv[]) {
     if (!regex_match(s, pattern))
         correct = false;
 
-    sscanf(s.c_str(), "%d %d", &x, &y);
+    sscanf(s.c_str(), "%d%d", &x, &y);
     // Check valid coordinate
     if (x < 1 || y < 1 || x > m || y > n)
         correct = false;
