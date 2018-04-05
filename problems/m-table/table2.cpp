@@ -13,10 +13,10 @@ void printn(char ch, int n) {
 
 void hrule(const vector<int> &col_width) {
     for (int w: col_width) {
-        cout << "+";
+        cout << "$";
         printn('-', w);
     }
-    cout << "+\n";
+    cout << "$\n";
 }
 
 int main() {

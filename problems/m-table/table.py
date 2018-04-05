@@ -2,7 +2,7 @@ n = int(input())
 v = [input().rstrip().split(',') for i in range(n)]
 m = len(v[0])
 k = [max(len(v[i][j]) for i in range(n)) for j in range(m)]
-h = '+' + (''.join(('-'*x + '+') for x in k))
+h = '$' + (''.join(('-'*x + '$') for x in k))
 
 print(h)
 for i in range(n):
@@ -14,4 +14,4 @@ for i in range(n):
         print('|', end = '')
     print()
     print(h)
-
+ 
