@@ -7,6 +7,18 @@
 
 \begin{document}
 
+\section*{A - A Simple Geometry Problem}
+
+
+
+\section*{B - Barfoosia Tax Return}
+
+This is an ad hoc problem. You can use if-else branch to determine the total amount of tax, and take the difference between it and the withheld tax to find out the amount refunded/owed. 
+
+\section*{C - Common Mistake}
+
+
+
 \section*{D - Dull Game}
 We notice that, at each step, if we choose the a point with $x$-coordinate $x_0$, then the maximum
 point can be obtained is $y_0$ where:
@@ -25,6 +37,24 @@ implemented with lazy propagation. You can look at the solution code for more de
 
 At each step, updating takes $O(\log{n})$ while querying takes $O(1)$. Thus, the total complexity is $O(n\log{n})$.
 
+
+\section*{E - Enclose These Cows}
+Consider directed edges between all pairs of poles. We want to pick those directed edges that has all cows on its left side. Then a cycle formed by these edges is a valid enclosing fence, and the problem reduces to finding the shortest cycle in a directed graph, which can be done with Floyd in $O(N^3)$. Overall complexity is $O(M N^2 + N^3)$. 
+
+\section*{F - Featured Animals}
+
+Placing animals from left to right is a Markov process, so we can use matrix multiplication. Let state vector have $i$th element representing the number of configurations when the current cage contains type $i$ animal. Transition matrix is the one matrix except where corresponding adjacent types are forbidden, in which case the matrix element is zero. We must zero out some state vector elements in certain stages because these cages forbid some types of animals. Time complexity is $O(N M^2)$. 
+
+We can optimize with fast matrix exponentiation. This will give us time complexity $O(M^3 K \log{\frac{N}{K}}) = O(M^3 K \log{N})$. We can further precompute base matrices, yielding time complexity $O(M^3 \log{N} + M^2 K \log{\frac{N}{K}}) = O((M+K) M^2 \log{N})$. 
+
+\section*{G - Greedy String Match}
+
+
+
+\section*{H - Hard Combinatorics}
+
+
+
 \section*{I - Impossible Task}
 Consider $n = p_1^{\alpha_1}p_2^{\alpha_2}\cdots p_k^{\alpha_k}$ where $p_1, p_2, \cdots, p_k$ are prime factors of $n$.
 Then, the sum $S$ of all factors of $n$ can be calculated as
@@ -42,7 +72,7 @@ For each $n$, we need $O(\log{n})$ time to answer the query, thus the total comp
 the complexity of running the sieve since its complexity $O(N\log{N})$ (where $N$ is the maximum value of $n$), in this case, is
 a constant.
 
-\section*{J - Just a hike!}
+\section*{J - Just A Hike!}
 We can solve the problem using binary search on the columns. Suppose we are searching in $[l, r]$. 
 Let $mid = \floor{\frac{l + r}{2}}$. Let 
 \begin{equation}
@@ -73,10 +103,16 @@ We starts the search with segment $[1, n]$.\\
 
 \noindent At each step, we need to calculate all the values in $3$ columns $mid - 1, mid, mid + 1$. This can be done in $O(m)$. Thus, the total complexity is $O(m\log{n})$.
 
-\section*{F - Featured Animals}
+\section*{K - Kindle the Bonfire}
 
-Placing animals from left to right is a Markov process, so we can use matrix multiplication. Let state vector have $i$th element representing the number of configurations when the current cage contains type $i$ animal. Transition matrix is the one matrix except where corresponding adjacent types are forbidden, in which case the matrix element is zero. We must zero out some state vector elements in certain stages because these cages forbid some types of animals. Time complexity is $O(N M^2)$. 
 
-We can optimize with fast matrix exponentiation. This will give us time complexity $O(M^3 K \log{\frac{N}{K}}) = O(M^3 K \log{N})$. We can further precompute base matrices, yielding time complexity $O(M^3 \log{N} + M^2 K \log{\frac{N}{K}}) = O((M+K) M^2 \log{N})$. 
+
+\section{L - Land of Fantasy}
+
+
+
+\section{M - Macrosoft}
+
+
 
 \end{document}
