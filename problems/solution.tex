@@ -12,7 +12,7 @@ UIUC ICPC Spring Coding Contest Editorial
 
 \section{B - Barfoosia Tax Return}
 
-
+This is an ad hoc problem. You can use if-else branch to determine the total amount of tax, and take the difference between it and the withheld tax to find out the amount refunded/owed. 
 
 \section{C - Common Mistake}
 
@@ -24,7 +24,7 @@ UIUC ICPC Spring Coding Contest Editorial
 
 \section{E - Enclose These Cows}
 
-
+Consider directed edges between all pairs of poles. We want to pick those directed edges that has all cows on its left side. Then a cycle formed by these edges is a valid enclosing fence, and the problem reduces to finding the shortest cycle in a directed graph, which can be done with Floyd in $O(N^3)$. Overall complexity is $O(M N^2 + N^3)$. 
 
 \section{F - Featured Animals}
 
