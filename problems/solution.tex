@@ -10,15 +10,14 @@
 
 \section*{A - A Simple Geometry Problem}
 
-
+This is an easy problem. The formula for deriving the new coordinates are given to you, and your job is to figure out how to use the language's built-in trigonometry functions (sine and cosine), and most likely you will have to covert degrees to radians ($rad = deg / 180 * \pi$). 
 
 \section*{B - Barfoosia Tax Return}
 
 This is an ad hoc problem. You can use if-else branch to determine the total amount of tax, and take the difference between it and the withheld tax to find out the amount refunded/owed. 
 
 \section*{C - Common Mistake}
-
-
+Standard 0-1 knapsack problem. Only difference is after doing dp, you need to iterate through all weights and multiply the fire power with multiplier in that load range.
 
 \section*{D - Dull Game}
 We notice that, at each step, if we choose the a point with $x$-coordinate $x_0$, then the maximum
@@ -50,7 +49,7 @@ We can optimize with fast matrix exponentiation. This will give us time complexi
 
 \section*{G - Greedy String Match}
 
-
+First build a Trie tree from the keywords. Trie tree is a compact data structure to store a set of strings. Then follow the greedy matching rules and try match a keyword starting from each index $i \in [0, |S|-1]$. If the matching starting from index $i$ fails, move on to index $i+1$. Otherwise, move starting point accordingly. Complexity is $O(|S| * (length of longest keyword))$. 
 
 \section*{H - Hard Combinatorics}
 To solve this problem, we need to know the following combinatorics problem: The number of ways to move from $(0, 0)$ to $(x, y)$ (where $x, y \in \mathbb{N}, x, y > 0$), 
@@ -135,15 +134,28 @@ We starts the search with segment $[1, n]$.\\
 \noindent At each step, we need to calculate all the values in $3$ columns $mid - 1, mid, mid + 1$. This can be done in $O(m)$. Thus, the total complexity is $O(m\log{n})$.
 
 \section*{K - Kindle the Bonfire}
+We can do brute force and enumerate all possible configurations to light the bonfires. After than, use Floyd's algorithm to compute pair-wise shortest path. The diameter would simply be the maximum among them.
 
 
+\section*{L - Land of Fantasy}
+We can model this problem as a graph problem. Each bullet represents a node, and there is an edge between two nodes if and only if the two bullets overlap. Also model the left
+boundary and right boundary as special nodes. As last, check whether the left boundary is connected with the right boundary. If they are connected, then it's impossible to pass the battlefield. We can also use disjoint sets to simplify the modeling and speed up the process.
 
-\section{L - Land of Fantasy}
-
-
-
-\section{M - Macrosoft}
-
-
-
+\section*{M - Macrosoft}
+This is an ad-hoc problem that requires you to know
+\begin{enumerate}
+\item How to read the input line by line
+\item How to use basic language features and libraries
+\begin{itemize}
+\item 1-D and 2-D arrays, strings, loops, built-in data structures etc.
+\end{itemize}
+\end{enumerate}
+Steps to implement the solution:
+\begin{enumerate}
+\item Read input line by line.
+\item Split each line using comma (,) as delimeter. This can be done either using a library function if one is available, or using a loop manually. Store the splitted strings into a 2-D array. 
+\item Find the maximum length of all strings in each column. This will determine the width of that column.
+\item Print out the table in ASCII. If a string in less than the corresponding column width, add additional white space characters on the left or right, depending on whether it is a number or not.
+\end{enumerate}
+Time Complexity: $O(\text{size of input})$
 \end{document}
