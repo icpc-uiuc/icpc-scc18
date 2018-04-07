@@ -30,7 +30,6 @@ int get_height(int x, int y) {
 
 int main(int argc, char* argv[]) {
     parse(argc, argv);
-printf("123\n");
     // Read input
     FILE* finp = fopen(input.c_str(), "r");
     fscanf(finp, "%d%d", &m, &n);

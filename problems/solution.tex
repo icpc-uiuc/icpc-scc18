@@ -1,6 +1,7 @@
 \documentclass{article}
 
 \usepackage{amsmath}
+\usepackage{amsfonts}
 \usepackage{mathtools}
 \DeclarePairedDelimiter\ceil{\lceil}{\rceil}
 \DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
@@ -52,8 +53,38 @@ We can optimize with fast matrix exponentiation. This will give us time complexi
 
 
 \section*{H - Hard Combinatorics}
+To solve this problem, we need to know the following combinatorics problem: The number of ways to move from $(0, 0)$ to $(x, y)$ (where $x, y \in \mathbb{N}, x, y > 0$), 
+allowing only moving right and up (along the axises with
+step size $1$), is
+\begin{equation}
+\begin{pmatrix}
+x + y\\
+x
+\end{pmatrix}
+\end{equation}
+Thus, for any $1 \leq i, j \leq N$,
+\begin{equation}
+\begin{pmatrix}
+A_i + B_j + C_i + D_j\\
+A_i + B_j
+\end{pmatrix}
+\end{equation}
+Is the number of ways to move from $(-B_j, -D_j)$ to $(A_i, C_i)$ giving the above constraints.\\
 
+\noindent Let us denote $(-B_1, -D_1), (-B_2, -D_2), \cdots, (-B_N, -D_N)$ as starting points and $(A_1, C_1), (A_2, C_2), \cdots, (A_N, C_N)$ as ending points. Then
+\begin{equation}
+\sum_{i = 1}^N\sum_{j = 1}^N\begin{pmatrix}
+A_i + B_j + C_i + D_j\\
+A_i + B_j
+\end{pmatrix}
+\end{equation}
+is the number of ways to move from any starting point to any ending point giving the above constraints. This problem can be solved with dynamic programming. Let
+$f(x, y)$ be the number of ways to move from some starting points to $(x, y)$. Then, we have the recursive formula:
+\begin{equation}
+f(x, y) = f(x - 1, y) + f(x, y - 1)
+\end{equation}
 
+\noindent Hence, the complexity is $O((maxA - maxB) \times (maxC - maxD))$.
 
 \section*{I - Impossible Task}
 Consider $n = p_1^{\alpha_1}p_2^{\alpha_2}\cdots p_k^{\alpha_k}$ where $p_1, p_2, \cdots, p_k$ are prime factors of $n$.
