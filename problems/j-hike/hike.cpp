@@ -6,21 +6,13 @@ const int maxN = 1e6, modP = 1e9 + 7;
 
 int a[maxN], m, n;
 
-int power(int x, int p) {
-    if (p == 0) return 1;
-    if (p == 1) return x;
-    int c = power(x, p / 2);
-    c = (1ll * c * c) % modP;
-    if (p % 2) c = (1ll * c * x) % modP;
-    return c;
-}
-
 int get_max(int c, int& p) {
     int v = 0;
+    int h = 1;
     for (int r = 1; r <= m; ++r) {
-        int t = power(a[c], r);
-        if (v < t)
-            v = t, p = r;
+        h = (1ll * h * a[c]) % modP;
+        if (v < h)
+            v = h, p = r;
     }
     return v;
 }

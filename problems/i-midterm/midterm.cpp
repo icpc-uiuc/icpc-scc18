@@ -48,10 +48,10 @@ int main() {
     }
 
     cin >> q >> n;
-	long long ans = 0;
+    long long ans = 0;
     for (int i = 0; i < q; ++i) {
         ans += f[n];
-		n = ((long long)n * n) % 999983 + 1;
+        n = ((long long)n * n) % 999983 + 1;
     }
-	cout << ans << endl;
+    cout << ans << endl;
 }
