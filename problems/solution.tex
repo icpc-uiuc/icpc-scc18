@@ -16,8 +16,7 @@
 This is an ad hoc problem. You can use if-else branch to determine the total amount of tax, and take the difference between it and the withheld tax to find out the amount refunded/owed. 
 
 \section*{C - Common Mistake}
-
-
+Standard 0-1 knapsack problem. Only difference is after doing dp, you need to iterate through all weights and multiply the fire power with multiplier in that load range.
 
 \section*{D - Dull Game}
 We notice that, at each step, if we choose the a point with $x$-coordinate $x_0$, then the maximum
@@ -104,12 +103,12 @@ We starts the search with segment $[1, n]$.\\
 \noindent At each step, we need to calculate all the values in $3$ columns $mid - 1, mid, mid + 1$. This can be done in $O(m)$. Thus, the total complexity is $O(m\log{n})$.
 
 \section*{K - Kindle the Bonfire}
-
+We can do brute force and enumerate all possible configurations to light the bonfires. After than, use Floyd's algorithm to compute pair-wise shortest path. The diameter would simply be the maximum among them.
 
 
 \section*{L - Land of Fantasy}
-
-
+We can model this problem as a graph problem. Each bullet represents a node, and there is an edge between two nodes if and only if the two bullets overlap. Also model the left
+boundary and right boundary as special nodes. As last, check whether the left boundary is connected with the right boundary. If they are connected, then it's impossible to pass the battlefield. We can also use disjoint sets to simplify the modeling and speed up the process.
 
 \section*{M - Macrosoft}
 This is an ad-hoc problem that requires you to know
