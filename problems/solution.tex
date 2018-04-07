@@ -4,10 +4,60 @@
 
 \begin{document}
 
-F
+UIUC ICPC Spring Coding Contest Editorial
+
+\section{A - A Simple Geometry Problem}
+
+
+
+\section{B - Barfoosia Tax Return}
+
+
+
+\section{C - Common Mistake}
+
+
+
+\section{D - Dull Game}
+
+
+
+\section{E - Enclose These Cows}
+
+
+
+\section{F - Featured Animals}
 
 Placing animals from left to right is a Markov process, so we can use matrix multiplication. Let state vector have $i$th element representing the number of configurations when the current cage contains type $i$ animal. Transition matrix is the one matrix except where corresponding adjacent types are forbidden, in which case the matrix element is zero. We must zero out some state vector elements in certain stages because these cages forbid some types of animals. Time complexity is $O(N M^2)$. 
 
 We can optimize with fast matrix exponentiation. This will give us time complexity $O(M^3 K \log{\frac{N}{K}}) = O(M^3 K \log{N})$. We can further precompute base matrices, yielding time complexity $O(M^3 \log{N} + M^2 K \log{\frac{N}{K}}) = O((M+K) M^2 \log{N})$. 
+
+\section{G - Greedy String Match}
+
+
+
+\section{H - Hard Combinatorics}
+
+
+
+\section{I - Impossible Task}
+
+
+
+\section{J - Just A Hike!}
+
+
+
+\section{K - Kindle the Bonfire}
+
+
+
+\section{L - Land of Fantasy}
+
+
+
+\section{M - Macrosoft}
+
+
 
 \end{document}
