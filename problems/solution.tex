@@ -107,12 +107,25 @@ We starts the search with segment $[1, n]$.\\
 
 
 
-\section{L - Land of Fantasy}
+\section*{L - Land of Fantasy}
 
 
 
-\section{M - Macrosoft}
-
-
-
+\section*{M - Macrosoft}
+This is an ad-hoc problem that requires you to know
+\begin{enumerate}
+\item How to read the input line by line
+\item How to use basic language features and libraries
+\begin{itemize}
+\item 1-D and 2-D arrays, strings, loops, built-in data structures etc.
+\end{itemize}
+\end{enumerate}
+Steps to implement the solution:
+\begin{enumerate}
+\item Read input line by line.
+\item Split each line using comma (,) as delimeter. This can be done either using a library function if one is available, or using a loop manually. Store the splitted strings into a 2-D array. 
+\item Find the maximum length of all strings in each column. This will determine the width of that column.
+\item Print out the table in ASCII. If a string in less than the corresponding column width, add additional white space characters on the left or right, depending on whether it is a number or not.
+\end{enumerate}
+Time Complexity: $O(\text{size of input})$
 \end{document}
